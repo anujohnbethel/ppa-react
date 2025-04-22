@@ -5,14 +5,14 @@
 // import './App.css'
 
 
-import { Routes, Route, Link } from 'react-router-dom';
-import Home from './pages/Home.tsx';
-import About from './pages/About.tsx';
+// import { Routes, Route, Link } from 'react-router-dom';
+// import Home from './pages/Home.tsx';
+// import About from './pages/About.tsx';
 
-function App() {
-  return (
-    <div>
-      HI
+// function App() {
+//   return (
+//     <div>
+//       HI
 
      
       {/* <nav style={{ display: 'flex', gap: '1rem' }}>
@@ -24,11 +24,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes> */}
-    </div>
-  );
-}
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
 
 
 
