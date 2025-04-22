@@ -1,9 +1,13 @@
+import logo from '../assets/images/logo.png'; // adjust path based on your file location
+
+
+
 const Home = () => {
     return  <div className="container">
     <header  className="primary-header">  
         
             <div className="logo-italic">            
-                <a href="#"><img src="/src/images/logo.png" alt="Logo image of Peniel Pentecostal Assembly Church"/>
+                <a href="#"><img src={logo} alt="Logo image of Peniel Pentecostal Assembly Church"/>
                 </a>
                 <div className="name" aria-hidden="true" ><p><span>P</span>eniel</p><p><span>P</span>entecostal</p><p><span>A</span>ssembly</p></div>
               </div>
