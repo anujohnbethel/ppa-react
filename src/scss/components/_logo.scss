@@ -1,0 +1,45 @@
+.logo{
+    font-family: var(--ff-logo);
+    padding:.5rem;
+    margin:1rem;
+    width:200px;
+    display:grid;
+    grid-template-columns: 1fr 2.5fr;
+
+    img{
+
+        width:100%;
+        aspect-ratio: 1;
+    }
+
+    & .name {
+        font-size: .8rem;
+        line-height:.8;
+        transform: translateY(.9rem);        
+        p{
+            display: block;
+            color:green; 
+            margin-left:-5px;   
+            letter-spacing: 3px;
+            text-shadow: 1.5px 0 2px gray;
+            
+        }
+        p span {
+            font-weight: bold;
+            color:blue;
+            padding:.2rem;
+            // font-style: italic;
+            
+        }
+
+        :first-child {
+            transform: translateX(.5rem);
+        }
+        :last-child {
+            transform: translateX(.3rem);
+        }
+
+        
+    }
+}
+

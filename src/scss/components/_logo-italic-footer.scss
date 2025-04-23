@@ -1,0 +1,53 @@
+.logo-italic-footer{
+    font-family: var(--ff-logo);
+    
+    padding:.5rem .5rem .5rem 0;
+    margin:1rem 1rem 1rem 0;
+    width:200px;
+    display:grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap:5px;
+    img{
+        background-color: white;
+        padding:5px;
+        border-radius: 50%;
+        width:100%;
+        aspect-ratio: 1;
+        
+    }
+
+
+    .name {
+        font-size: .8rem;
+        line-height:.8;
+        transform: translateY(.9rem);        
+        p{
+            display: block;
+            color:white; 
+            margin-left:-5px;   
+            letter-spacing: 0;
+            
+        }
+        p span {
+            font-weight: bold;
+            color:white;
+            padding:.2rem;
+            font-style: italic;
+            
+        }
+
+        :first-child {
+            transform: translateX(.5rem);
+        }
+        :last-child {
+            transform: translateX(.3rem);
+        }
+
+        
+    }
+    
+
+    
+    
+}
+

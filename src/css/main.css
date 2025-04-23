@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -6,6 +7,7 @@
 /* 2. Remove default margin */
 * {
   margin: 0;
+  padding: 0;
 }
 
 /* 3. Enable keyword animations */
@@ -124,6 +126,27 @@ body {
   --container-padding: 1rem;
   width: min(var(--max-width), 100% - var(--container-padding) * 2);
   margin-inline: auto;
+}
+
+.flow * + * {
+  margin-top: var(--flow-spacer, 1rem);
+}
+
+.odd-para-translate-x ~ p:nth-child(odd) {
+  transform: translateX(7px);
+  overflow: hidden;
+}
+
+.para-vertical-filler ~ p:nth-child(even) {
+  padding: 5px 5px 5px 25px;
+  border-radius: 5px;
+  border-left: 5px solid blue;
+  box-shadow: 0 0 15px 0 hsla(0, 5%, 89%, 0.403);
+}
+.para-vertical-filler ~ p:nth-child(odd) {
+  padding-right: 25px;
+  border-radius: 5px;
+  border-right: 5px solid blue;
 }
 
 .logo {
@@ -499,6 +522,38 @@ a.border-button:hover {
   grid-template-columns: 1fr;
   gap: 0.5rem;
 }
+.special-event-container .brocher {
+  position: relative;
+  display: inline-block;
+}
+.special-event-container .brocher::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(to top, hsl(235, 62%, 73%) 40%, hsla(235, 62%, 73%, 0.07) 50%);
+  opacity: 0.7;
+  pointer-events: none; /* optional: so it doesn’t interfere with clicks */
+}
+@media (min-width: 900px) {
+  .special-event-container .brocher::after {
+    background: linear-gradient(to right, hsl(235, 62%, 73%) 40%, hsla(235, 62%, 73%, 0.07) 50%);
+  }
+}
+.special-event-container .brocher h1 {
+  position: absolute;
+  left: 10px;
+  bottom: 20px;
+  color: white;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: bold;
+  max-width: 30ch;
+  z-index: 2;
+}
 .special-event-container .special-event {
   position: relative;
   display: flex;
@@ -775,9 +830,18 @@ footer .copyright-text p {
 footer .copyright-text p a {
   color: #1b6ec2;
 }
+footer .footer-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
 footer .footer-menu li {
-  margin-left: 20px;
   display: inline;
+}
+@media (min-width: 800px) {
+  footer .footer-menu li {
+    margin-left: 20px;
+  }
 }
 footer .footer-menu li:hover a {
   color: #1b6ec2;
@@ -788,237 +852,21 @@ footer .footer-menu li a {
   font-size: 11px !important;
 }
 
-.card-ppa {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 98%;
-  margin: 0 auto;
+.service {
+  --service-font-size:1rem;
+  --service-line-height:1.5em;
+  --service-padding-block:1.5rem;
+  padding-block: var(--service-padding-block);
+  font-size: var(--service-font-size);
+  line-height: var(--service-line-height);
+  text-align: justify;
+}
+.service .service-cta h2 {
+  text-align: left;
+  max-width: 30ch;
+  font-size: 1.75rem;
 }
 
-.card-Services {
-  box-sizing: border-box;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
-  transition: 0.3s;
-  padding: 2em 2em 0;
-  margin: 1em 1em;
-}
-
-.card-Services .content {
-  padding: 10px 20px 5px 20px;
-  text-align: center;
-  color: #111;
-}
-
-.card-Services .content-split {
-  padding: 10px 20px 5px 20px;
-  text-align: center;
-  color: #111;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.card-Services .content-split .splitter {
-  width: 50%;
-  height: 0;
-  border: 1px solid gray;
-  margin: 1rem auto;
-}
-
-.card-Services .imgbox {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  height: 320px;
-  /* min-height:50px; */
-  /* margin-top: -55px; */
-  border-radius: 10px;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
-}
-
-.card-Services .imgbox.BCCA {
-  background: no-repeat center url("../images/BCC church.jpg");
-  background-size: cover;
-}
-
-.card-Services .imgbox.ACCA {
-  background: no-repeat center url("../images/ACCA Center.jpeg");
-  background-size: cover;
-}
-
-.card-Services .imgbox h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  background-color: #d1d6db;
-  width: 100%;
-}
-
-.card-Services .content p {
-  color: #706767;
-  letter-spacing: 0.05em;
-}
-
-.card-Services .imgbox h2 {
-  font-size: 2rem;
-  margin: 0 0 0.5em 0;
-  padding: 0.2em 0.5em;
-  letter-spacing: 0.08em;
-  color: #6e8aa7;
-  border: 1px solid #6e8aa7;
-  border-radius: 2%;
-}
-
-.card-Services .content h3.box-title {
-  height: 2.7em;
-  font-size: 1.5rem;
-  margin: 0;
-  color: #636161;
-  letter-spacing: 0.05em;
-}
-
-/* .card-Services .content h3 {
-
-} */
-.box-time {
-  margin: 0.5em 0;
-}
-
-.copyright {
-  font-size: 0.8em;
-}
-
-@media screen and (min-width: 600px) {
-  section.services {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .card-ppa {
-    margin-top: 2em;
-  }
-  .card-ppa {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-  .card-Services {
-    width: 98%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
-    transition: 0.3s;
-    padding: 2em 0.5em 0;
-    margin: 1em 0.5em;
-  }
-  .card-Services .content-split {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  .card-Services .content-split .splitter {
-    width: 0;
-    height: 50%;
-    border: 1px solid gray;
-    margin: auto 2rem;
-  }
-  .card-Services .content-split .detail {
-    align-items: center;
-  }
-  .card-Services .imgbox h2 {
-    box-sizing: border-box;
-    margin: 0 0 0.5em 0;
-    padding: 0.5em 0.5em;
-    letter-spacing: 0.08em;
-    color: #6e8aa7;
-    border: 1px solid #6e8aa7;
-    border-radius: 2%;
-  }
-  /* .card-Services .content h3 {
-
-  } */
-  .card-Services .content h3.box-title {
-    height: 2.7em;
-    font-size: 2rem;
-  }
-  .box-time {
-    margin: 0;
-    line-height: 1.2em;
-  }
-}
-@media screen and (min-width: 800px) {
-  .card-ppa {
-    margin-top: 1em;
-    align-items: stretch;
-  }
-  .card-Services .content h3 {
-    font-size: 1.5rem;
-  }
-  .card-Services .content h3.box-title {
-    height: 2.7em;
-  }
-  .box-time {
-    font-size: 2rem;
-    margin: 0;
-    line-height: 1.2em;
-  }
-}
-@media screen and (min-width: 900px) {
-  .card-Services {
-    border-radius: 10px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
-    transition: 0.3s;
-    padding: 2em 1em 0;
-    margin: 1em 1em;
-  }
-}
-section.services {
-  padding-bottom: 10rem;
-}
-
-section.services .sunday-service-container {
-  display: grid;
-  gap: 2rem;
-  margin: 0 2rem;
-}
-
-section.services .sunday-service-container img {
-  width: 20rem;
-  height: 20rem;
-  border-radius: 50%;
-  box-shadow: 1px 3px 12px 8px rgba(0, 0, 0, 0.13);
-}
-
-section.services .sunday-service-container .sunday-service-card {
-  border-radius: 0.5rem;
-  background-color: #fff;
-  padding: 2rem;
-}
-
-@media screen and (min-width: 800px) {
-  section.services .sunday-service-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 1200px) {
-  section.services .sunday-service-container {
-    grid-template-columns: repeat(5, 1fr);
-  }
-  section.services .sunday-service-container .sunday-service-card:nth-child(1) {
-    grid-column: span 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
 :root {
   --clr-primary-hsl-400-t: hsl(252, 100%, 67%);
   --clr-primary-hsl-500-t: hsl(256, 72%, 46%);
@@ -1645,4 +1493,4 @@ h1, h2, h3, h4, h5, h6 {
 
 #root, #__next {
   isolation: isolate;
-}
+}/*# sourceMappingURL=main.css.map */

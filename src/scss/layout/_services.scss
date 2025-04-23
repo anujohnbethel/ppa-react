@@ -1,0 +1,22 @@
+
+.service {
+  --service-font-size:1rem;
+  --service-line-height:1.5em;
+  --service-padding-block:1.5rem;
+  padding-block:var(--service-padding-block);
+  font-size:var(--service-font-size);
+  line-height: var(--service-line-height);
+  text-align: justify;
+  
+  .service-cta h2 {
+    text-align:left;
+    max-width:30ch;
+    font-size:1.75rem;
+  } 
+
+
+}
+
+
+
+

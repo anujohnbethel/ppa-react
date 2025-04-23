@@ -1,0 +1,8 @@
+
+
+.odd-para-translate-x ~ p:nth-child(odd) {
+    transform: translateX(7px); 
+    overflow: hidden;
+    
+  }
+  

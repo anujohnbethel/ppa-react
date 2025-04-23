@@ -1,0 +1,22 @@
+/* ie9+ */
+.visually-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+
+  .container {
+    --max-width: 1110px;
+    --container-padding: 1rem;
+  
+    width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+    margin-inline: auto;
+  }
+
+  .flow * + * {
+    margin-top:var(--flow-spacer,1rem);
+  }
