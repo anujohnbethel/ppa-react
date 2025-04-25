@@ -1,0 +1,19 @@
+$clr-accent-400:blue;
+$para-border-radius:5px;
+$para-padding-right:25px;
+$para-padding-left:25px;
+
+.para-vertical-filler-tranlate{
+
+  ~ p {
+    padding:5px 5px 5px $para-padding-left;
+    border-radius: $para-border-radius;
+    border-left:5px solid $clr-accent-400;
+    box-shadow: 0 0 15px 0 hsla(0, 5%, 89%, 0.403);
+    max-width:90%;
+  }
+
+  & ~ p:nth-child(odd) {
+   transform: translateX(24px);
+  }
+}

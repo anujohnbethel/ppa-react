@@ -1,7 +1,9 @@
-// import logo from '../assets/images/logo.png'; // adjust path based on your file location
-// import '../js/main.js'
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot} from '@fortawesome/free-solid-svg-icons';
+import { faClock } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
     useEffect(() => {
@@ -70,7 +72,7 @@ const Home = () => {
      
         </header>
         <main role="main">
-            <section className="special-event-container | grid-group">
+            <section className="hero | grid-group">
                 <div className="brocher">
                     <img src="/images/PPA-photos/PPA church 2023.JPG" alt=""/>
                     <h1 >A Christian community in the Pentecostal Experience, celebrating together our life as the people of the living God.</h1>
@@ -80,14 +82,14 @@ const Home = () => {
             
             
 
-        <section className="service | flow ">
+        <section className="service | grid-group ">
                 
             
-                <div className="service-cta">   
+                <div className="service-cta | flow">   
                     
-                    <h2 className='odd-para-translate-x para-vertical-filler'>Join Us for a Spirit-Filled Multilingual Worship Experience</h2>
+                    <h2 className="para-vertical-filler-tranlate">Join Us for a Spirit-Filled Multilingual Worship Experience</h2>
                     
-                    <p>
+                    <p  style={{ '--flow-spacer': '3rem' } as any}>
                         Join our vibrant faith community in Beaumont for uplifting, 
                         Spirit-filled worship that brings people of all cultures together. 
                         Our multilingual services offer a welcoming space to grow in faith and
@@ -101,48 +103,62 @@ const Home = () => {
                         worship, biblical teaching, and a community that feels like home.
                     </p>
                 </div>
+                <div className='card flex-group'>
                 <div className="multilingual-worship">
                     <img src="/images/PPA-photos/Pr Biju-m-r.jpg" alt="multilingual worship" />
 
-                    
-                    <h2>MULTILINGUAL WORSHIP</h2>
-                    
-                    <div>
-                        <p><i className="fa-solid fa-location-dot"></i>Peniel Pentecostal Assembly
-                            <span className="address">2015 41 Ave Sw Edmonton AB T6X2 T4.</span>
-                        </p>
-                        <p><i className="fa-solid fa-clock"></i>Every Sunday 10.30 A.M</p>
+                    <div className='card__content flow'  style={{ '--flow-spacer': '1rem' } as any}>
+                        <h2>MULTILINGUAL WORSHIP</h2>
+                        
+                        <div>
+                            <p>
+                                <FontAwesomeIcon className='location-icon' icon={faLocationDot} />
+                                <span className="church-name">Peniel Pentecostal Assembly</span>
+                                2015 41 Ave Sw Edmonton AB T6X2 T4.
+                            </p>
+                            <p><FontAwesomeIcon icon={faClock} style={{ marginRight: '8px' }} />Every Sunday 10.30 A.M</p>
+                        </div>
                     </div>
+                    
                 </div>
 
                 <div className="hindi-worship">
                     <img src="/images/PPA-photos/BBQ worship2_r_m.jpg" alt="hindi worship" />
 
-                    
-                    <h2>PUNJABI/HINDI WORSHIP</h2>
-                    
-                    <div>
-                        <p><i className="fa-solid fa-location-dot"></i>Peniel Pentecostal Assembly
-                            <span className="address">2015 41 Ave Sw Edmonton AB T6X2 T4.</span>
-                        </p>
-                        <p><i className="fa-solid fa-clock"></i>Every Sunday 8.30 A.M</p>
+                    <div className='card__content flow'  style={{ '--flow-spacer': '1rem' } as any}>
+                        <h2>PUNJABI/HINDI WORSHIP</h2>
+                        
+                        <div>
+                            <p>
+                                <FontAwesomeIcon className='location-icon' icon={faLocationDot}/>
+                                <span className="church-name">Peniel Pentecostal Assembly</span>
+                                2015 41 Ave Sw Edmonton AB T6X2 T4.
+                            </p>
+                            <p><FontAwesomeIcon icon={faClock} style={{ marginRight: '8px' }} />Every Sunday 8.15 A.M</p>
+                        </div>
                     </div>
+                    
                 </div>
 
                 
                 <div className="sunday-school">
                     <img src="/images/PPA-photos/vbs20231.JPG" alt="Sunday school" />
 
-                    
-                    <h2>SUNDAY SCHOOL</h2>
-                    
+                <div className='card__content flow' style={{ '--flow-spacer': '1rem' } as any}>
+                    <h2>SUNDAY SCHOOL</h2>                    
                     <div>
-                        <p><i className="fa-solid fa-location-dot"></i>Peniel Pentecostal Assembly
-                            <span className="address">2015 41 Ave Sw Edmonton AB T6X2 T4.</span>
-                        </p>
-                        <p><i className="fa-solid fa-clock"></i>Every Sunday 8.45 A.M</p>
+                            <p>
+                                <FontAwesomeIcon className='location-icon' icon={faLocationDot} />
+                                <span className="church-name">Peniel Pentecostal Assembly</span>
+                                2015 41 Ave Sw Edmonton AB T6X2 T4.
+                            </p>
+                            <p><FontAwesomeIcon icon={faClock} style={{ marginRight: '8px' }} />Every Sunday 8.45 A.M</p>
                     </div>
                 </div>
+                    
+                </div>
+                </div>
+                
 
 
     </section>

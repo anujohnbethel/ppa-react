@@ -17,6 +17,19 @@
     margin-inline: auto;
   }
 
-  .flow * + * {
-    margin-top:var(--flow-spacer,1rem);
+  
+  .flow :not(:first-child) {
+    margin-top:var(--flow-spacer, 2em);
+  }
+  
+  .grid-group{
+    display:grid;
+  }
+
+  .flex-group {
+    display: flex;
+    flex-wrap: wrap;
+    @media(min-width:900px) {
+      flex-wrap:initial;
+    }
   }

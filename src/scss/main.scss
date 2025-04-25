@@ -5,16 +5,17 @@
 @use 'utilities/utilities';
 @use 'utilities/odd-para-translate-x';
 @use 'utilities/para-margin-vertical-filler';
+@use 'utilities/para-vertical-filler-tranlate';
 
 @use 'components/logo';
 @use 'components/logo-italic';
 @use 'components/logo-italic-footer';
 @use 'components/hamburger-menu';
 @use 'components/buttons';
-@use 'components/special-events';
+@use 'components/hero';
 
 @use 'layout/header';
 @use 'layout/footer';
 @use 'layout/services';
 
-@use 'pages/special-event.scss'
+// @use 'pages/special-event.scss'
