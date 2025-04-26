@@ -177,6 +177,10 @@ body {
   margin-top: var(--flow-spacer, 2em);
 }
 
+.section-mb {
+  margin-block: var(--section-spacer, 4rem);
+}
+
 .grid-group {
   display: grid;
 }
@@ -790,6 +794,12 @@ footer .footer-menu li a {
 @media (min-width: 800px) {
   .service .service-cta h2 {
     font-size: var(--fs-900);
+  }
+}
+@media (min-width: 600px) {
+  .service .service-cta.grid-group {
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
   }
 }
 .service .service-cta p {

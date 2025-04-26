@@ -82,26 +82,28 @@ const Home = () => {
             
             
 
-        <section className="service | grid-group ">
+        <section className="service | grid-group section-mb">
                 
             
-                <div className="service-cta | flow">   
+                <div className="service-cta | flow grid-group">   
                     
                     <h2 className="para-vertical-filler-tranlate">Join Us for a Spirit-Filled Multilingual Worship Experience</h2>
+                    <div className="right-lg">
+                        <p  style={{ '--flow-spacer': '3rem' } as any}>
+                            Join our vibrant faith community in Beaumont for uplifting, 
+                            Spirit-filled worship that brings people of all cultures together. 
+                            Our multilingual services offer a welcoming space to grow in faith and
+                            connect with others.
+                        </p>
+                        <p>
+                            In Edmonton, we provide Sunday worship services in English, Malayalam, Punjabi,
+                            Hindi and Tamil, so you can experience God’s love in your native language.
+                        </p>
+                        <p>Newcomers are always welcome. Visit us this Sunday to encounter heartfelt
+                            worship, biblical teaching, and a community that feels like home.
+                        </p>
+                    </div>
                     
-                    <p  style={{ '--flow-spacer': '3rem' } as any}>
-                        Join our vibrant faith community in Beaumont for uplifting, 
-                        Spirit-filled worship that brings people of all cultures together. 
-                        Our multilingual services offer a welcoming space to grow in faith and
-                        connect with others.
-                    </p>
-                    <p>
-                        In Edmonton, we provide Sunday worship services in English, Malayalam, Punjabi,
-                        Hindi and Tamil, so you can experience God’s love in your native language.
-                    </p>
-                    <p>Newcomers are always welcome. Visit us this Sunday to encounter heartfelt
-                        worship, biblical teaching, and a community that feels like home.
-                    </p>
                 </div>
                 <div className='card flex-group'>
                 <div className="multilingual-worship">

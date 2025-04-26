@@ -23,6 +23,13 @@
       font-size: var(--fs-900);
     }
   } 
+
+  .service-cta.grid-group {
+    @media(min-width:600px) {
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+    }
+  }
   .service-cta p {
     max-width: 90%;
     margin-inline: auto;
