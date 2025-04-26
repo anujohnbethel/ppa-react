@@ -156,6 +156,7 @@ const Home = () => {
                             </p>
                             <p><FontAwesomeIcon icon={faClock} style={{ marginRight: '8px' }} />Every Sunday 8.45 A.M</p>
                     </div>
+
                 </div>
                     
                 </div>
@@ -165,6 +166,23 @@ const Home = () => {
 
     </section>
 
+    <section className="outreach-westlock section-mb grid-group">
+        <img src="/images/Westlock.jpg" alt="westlock picture" />
+        <div className='grid-group'>
+            <h3>Outreach Ministry in Westlock</h3>
+            <p>At Peniel Pentecostal Assembly, we believe in reaching out beyond our walls. Our outreach ministry in Westlock is all about serving the community, showing love in action, and building lasting relationships. Whether it’s through helping hands, listening ears, or community events, we’re here to make a difference. If you’d like to get involved or learn more, we’d love to hear from you!</p>
+            <h3>Outreach Ministry in Westlock</h3>
+            <p>Every Sunday, we come together to worship, pray, and grow in faith. Our services are a time to experience God’s presence, connect with others, and be encouraged for the week ahead. Worship starts at 5:30 P.M at Westlock. Everyone is welcome — come just as you are!</p>
+        </div>
+        <div className='grid-group'>
+                <p>
+                    <FontAwesomeIcon className='location-icon' icon={faLocationDot} />
+                    <span className="church-name">Peniel Pentecostal Assembly</span>
+                    Westlock, Alberta.
+                </p>
+                <p><FontAwesomeIcon icon={faClock} style={{ marginRight: '8px' }} />Every Sunday 5.30 P.M</p>
+        </div>
+    </section>
 
         
         </main>
